@@ -1,0 +1,18 @@
+<h3>Chats</h3>
+
+<div *ngFor="let user of users"
+     class="chat-item"
+     (click)="selectUser(user)"
+     [class.active]="user.id === selectedUserId">
+
+  <div style="display:flex; justify-content: space-between;">
+    <strong>{{ user.name }}</strong>
+
+    <span *ngIf="user.unread > 0" class="badge">
+      {{ user.unread }}
+    </span>
+  </div>
+
+  <p>{{ user.lastMessage }}</p>
+
+</div>

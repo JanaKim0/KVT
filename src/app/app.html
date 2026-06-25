@@ -1,0 +1,14 @@
+<!-- слева → список чатов
+справа → окно переписки -->
+
+<div style="display: flex; height: 100vh;">
+
+  <div style="width: 30%; border-right: 1px solid #ccc;">
+    <app-chat-list (userSelected)="onUserSelected($event)"></app-chat-list>
+  </div>
+
+  <div style="width: 70%;">
+    <app-chat-window [user]="selectedUser()"></app-chat-window>
+  </div>
+
+</div>

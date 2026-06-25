@@ -1,0 +1,48 @@
+<h2 class="chat-title" *ngIf="user">Chat with {{ user.name }}</h2>
+<h2 class="chat-title" *ngIf="!user">Select a chat</h2>
+
+<div class="messages" #messagesContainer>
+
+  <div *ngFor="let msg of messages"
+       class="message"
+       [class.me]="msg.from === 'You'"
+       [class.other]="msg.from !== 'You'">
+
+    <!-- AVATAR (только для других) -->
+    <div class="avatar" *ngIf="msg.from !== 'You'">
+      {{ msg.from[0] }}
+    </div>
+
+    <div class="bubble">
+
+      <div *ngIf="msg.from !== 'You'" class="name">
+        {{ msg.from }}
+      </div>
+
+      <div class="text">
+        {{ msg.text }}
+      </div>
+
+      <div class="time">
+        {{ msg.time }}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div *ngIf="user" class="input-area">
+
+  <input
+    [(ngModel)]="newMessage"
+    placeholder="Type message..."
+    (keydown.enter)="sendMessage($event)"
+  />
+
+  <button (click)="sendMessage($event)">
+    Send
+  </button>
+
+</div>
