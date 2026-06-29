@@ -14,12 +14,32 @@ export class ChatListComponent {
 
   selectedUserId: number | null = null;
 
-  users = [
-    { id: 1, name: 'Jana', lastMessage: 'Hey 👋', unread: 2 },
-    { id: 2, name: 'Anđela', lastMessage: 'See you later', unread: 0 },
-    { id: 3, name: 'David', lastMessage: 'Ok 👍', unread: 5 },
-    { id: 4, name: 'Stefan', lastMessage: 'Where are you?', unread: 1 }
-  ];
+ users = [
+  {
+    id: 1,
+    name: 'Jana',
+    lastMessage: 'Are you coming today?',
+    unread: 2
+  },
+  {
+    id: 2,
+    name: 'Anđela',
+    lastMessage: 'I’ll send it in 10 min 👍',
+    unread: 0
+  },
+  {
+    id: 3,
+    name: 'David',
+    lastMessage: 'Send me your Git repo pls',
+    unread: 1
+  },
+  {
+    id: 4,
+    name: 'Stefan',
+    lastMessage: 'We need to fix bugs before submission',
+    unread: 3
+  }
+];
 
   selectUser(user: any) {
     this.selectedUserId = user.id;

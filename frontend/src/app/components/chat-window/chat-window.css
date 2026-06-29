@@ -14,7 +14,14 @@
   flex-direction: column;
   gap: 10px;
 
-  background: #e5ddd5; /* более WhatsApp фон */
+  background: transparent;
+}
+
+.chat-window {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#d9fcde, #f5f5f5);
 }
 
 /* сообщение */

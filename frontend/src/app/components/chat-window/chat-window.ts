@@ -15,16 +15,27 @@ export class ChatWindowComponent {
 
  messagesByUserId: any = {
   1: [
-    { from: 'Jana', text: 'Hey 👋', time: '12:01' }
+    { from: 'Jana', text: 'Hey 👋', time: '12:01' },
+    { from: 'You', text: 'Hi Jana!', time: '12:02' },
+    { from: 'Jana', text: 'Are you coming today?', time: '12:03' }
   ],
+
   2: [
-    { from: 'Anđela', text: 'See you later', time: '12:01' }
+    { from: 'Anđela', text: 'Can you wait a bit?', time: '11:50' },
+    { from: 'You', text: 'Sure 👍', time: '11:51' },
+    { from: 'Anđela', text: 'I’ll send it in 10 min 👍', time: '11:52' }
   ],
+
   3: [
-    { from: 'David', text: 'Ok 👍', time: '12:01' }
+    { from: 'David', text: 'Hey man', time: '10:10' },
+    { from: 'David', text: 'Send me your Git repo pls', time: '10:11' },
+    { from: 'You', text: 'Okay, sending it now', time: '10:12' }
   ],
+
   4: [
-    { from: 'Stefan', text: 'Where are you?', time: '12:01' }
+    { from: 'Stefan', text: 'Where are you?', time: '09:00' },
+    { from: 'Stefan', text: 'We need to fix bugs before submission', time: '09:01' },
+    { from: 'Stefan', text: 'Please answer', time: '09:02' }
   ]
 };
 
