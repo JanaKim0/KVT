@@ -13,21 +13,20 @@ export class ChatWindowComponent {
 
   @Input() user: any;
 
-  // 👇 сообщения теперь по пользователям
-  messagesByUserId: any = {
-    1: [
-      { from: 'Ana', text: 'Hey 👋', time: '12:01' }
-    ],
-    2: [
-      { from: 'Marko', text: 'See you later', time: '12:01' }
-    ],
-    3: [
-      { from: 'Jelena', text: 'Ok 👍', time: '12:01' }
-    ],
-    4: [
-      { from: 'Petar', text: 'Where are you?', time: '12:01' }
-    ]
-  };
+ messagesByUserId: any = {
+  1: [
+    { from: 'Jana', text: 'Hey 👋', time: '12:01' }
+  ],
+  2: [
+    { from: 'Anđela', text: 'See you later', time: '12:01' }
+  ],
+  3: [
+    { from: 'David', text: 'Ok 👍', time: '12:01' }
+  ],
+  4: [
+    { from: 'Stefan', text: 'Where are you?', time: '12:01' }
+  ]
+};
 
   newMessage: string = '';
 

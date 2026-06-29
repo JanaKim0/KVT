@@ -15,15 +15,15 @@ export class ChatListComponent {
   selectedUserId: number | null = null;
 
   users = [
-    { id: 1, name: 'Ana', lastMessage: 'Hey 👋', unread: 2 },
-    { id: 2, name: 'Marko', lastMessage: 'See you later', unread: 0 },
-    { id: 3, name: 'Jelena', lastMessage: 'Ok 👍', unread: 5 },
-    { id: 4, name: 'Petar', lastMessage: 'Where are you?', unread: 1 }
+    { id: 1, name: 'Jana', lastMessage: 'Hey 👋', unread: 2 },
+    { id: 2, name: 'Anđela', lastMessage: 'See you later', unread: 0 },
+    { id: 3, name: 'David', lastMessage: 'Ok 👍', unread: 5 },
+    { id: 4, name: 'Stefan', lastMessage: 'Where are you?', unread: 1 }
   ];
 
   selectUser(user: any) {
     this.selectedUserId = user.id;
-    user.unread = 0; // 👈 считаем что прочитали
+    user.unread = 0;
     this.userSelected.emit(user);
   }
 }
